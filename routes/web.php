@@ -29,3 +29,4 @@ Route::group([
     Route::get('socket-chat', [\App\Http\Controllers\LessonController::class, 'socketChat']);
     Route::get('private-chat', [\App\Http\Controllers\LessonController::class, 'privateChat']);
 });
+Route::get('/room/{user}', [\App\Http\Controllers\MessageController::class, 'index'])->name('room');

@@ -4,8 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Events\NewMessage;
 use App\Events\PrivateMessage;
+use App\Models\Message;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Events\ChartEvent;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+
 class LessonController extends Controller
 {
     public function ajax()
@@ -61,9 +66,22 @@ class LessonController extends Controller
 
         event(new NewMessage($request->input('message')));
     }
+
     public function privateChat(Request $request)
     {
+        $channel = $request->channels;
+        Log::info($channel);
+        $idReceiver = $channel[0];
+        $id = substr($idReceiver, strpos($idReceiver, '.') + 1);
+        Log::info($id);
         PrivateMessage::dispatch($request->all());
+        $receiver = User::where('id', '=', $id)->first();
+        $message = Message::create([
+            'text' => $request->message,
+            'sender_id' => Auth::id(),
+            'receiver_id' => $receiver->id
+        ]);
+        Log::info($message);
         return $request->all();
     }
 }

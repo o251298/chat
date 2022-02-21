@@ -19,6 +19,6 @@ redis.on('pmessage', function (pattern, channel, message) {
     io.emit(channel + ':' + message.event, message.data);
 });
 
-http.listen(6001, function() {
+http.listen(6003, function() {
     console.log('Listening port: 6001');
 });

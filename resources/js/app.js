@@ -7,7 +7,12 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-
+import Vue from 'vue'
+import Toaster from 'v-toaster'
+// You need a specific loader for CSS files like https://github.com/webpack/css-loader
+import 'v-toaster/dist/v-toaster.css'
+// optional set default imeout, the default is 10000 (10 seconds).
+Vue.use(Toaster, {timeout: 5000})
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -26,6 +31,8 @@ Vue.component('pie-component', require('./components/PieChart.vue').default);
 Vue.component('socket-chart', require('./components/SocketChart.vue').default);
 Vue.component('socket-chat', require('./components/SocketChat.vue').default);
 Vue.component('private-chat', require('./components/PrivateChat.vue').default);
+Vue.component('chat-user', require('./components/ChatUser.vue').default);
+Vue.component('toast-component', require('./components/ToastComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

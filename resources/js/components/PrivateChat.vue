@@ -54,6 +54,7 @@
         },
         methods: {
             sendMessage: function () {
+                console.log(this.usersSelect);
                 this.is_send = true;
                 axios({
                     method: 'get',

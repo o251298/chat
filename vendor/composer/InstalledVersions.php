@@ -25,12 +25,12 @@ class InstalledVersions
     private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'a828f8f70c301b378269920ae893a6ba4ce4f72c',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -168,12 +168,12 @@ class InstalledVersions
     ),
     'fruitcake/php-cors' => 
     array (
-      'pretty_version' => 'v1.0.1',
-      'version' => '1.0.1.0',
+      'pretty_version' => 'v1.2.0',
+      'version' => '1.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '07611b4d603a72f097aeeeeb1e67d5ae7a6d0798',
+      'reference' => '58571acbaa5f9f462c9c77e911700ac66f446d4e',
     ),
     'graham-campbell/result-type' => 
     array (
@@ -455,12 +455,12 @@ class InstalledVersions
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'a828f8f70c301b378269920ae893a6ba4ce4f72c',
     ),
     'laravel/sail' => 
     array (

@@ -30,6 +30,8 @@
         "ioredis": "^4.28.5",
         "socket.io": "^4.4.1",
         "socket.io-client": "^4.4.1",
+        "v-toast": "^2.1.7",
+        "v-toaster": "^1.0.3",
         "vue-chartjs": "^3.5.1"
     }
 }
