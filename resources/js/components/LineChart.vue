@@ -29,7 +29,7 @@
         methods: {
             update: function(){
                 this.is_refresh = true;
-                axios.get('/lessons/line-chart').then((response) => {
+                axios.get('/line-chart').then((response) => {
                     console.log(response);
                     this.data = response.data;
                     this.is_refresh = false;

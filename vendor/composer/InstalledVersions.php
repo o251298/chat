@@ -30,11 +30,20 @@ class InstalledVersions
     'aliases' => 
     array (
     ),
-    'reference' => 'a828f8f70c301b378269920ae893a6ba4ce4f72c',
+    'reference' => '29f72e9f5d3bc417d93c3680f8eb14f7c29c81b2',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
+    'barryvdh/laravel-debugbar' => 
+    array (
+      'pretty_version' => 'v3.6.7',
+      'version' => '3.6.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b96f9820aaf1ff9afe945207883149e1c7afb298',
+    ),
     'brick/math' => 
     array (
       'pretty_version' => '0.9.3',
@@ -437,6 +446,15 @@ class InstalledVersions
         0 => 'v8.83.1',
       ),
     ),
+    'intervention/image' => 
+    array (
+      'pretty_version' => '2.7.1',
+      'version' => '2.7.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '744ebba495319501b873a4e48787759c72e3fb8c',
+    ),
     'kodova/hamcrest-php' => 
     array (
       'replaced' => 
@@ -460,7 +478,7 @@ class InstalledVersions
       'aliases' => 
       array (
       ),
-      'reference' => 'a828f8f70c301b378269920ae893a6ba4ce4f72c',
+      'reference' => '29f72e9f5d3bc417d93c3680f8eb14f7c29c81b2',
     ),
     'laravel/sail' => 
     array (
@@ -542,6 +560,15 @@ class InstalledVersions
       array (
       ),
       'reference' => 'aa70e813a6ad3d1558fc927863d47309b4c23e69',
+    ),
+    'maximebf/debugbar' => 
+    array (
+      'pretty_version' => 'v1.18.0',
+      'version' => '1.18.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0d44b75f3b5d6d41ae83b79c7a4bceae7fbc78b6',
     ),
     'mockery/mockery' => 
     array (
@@ -1087,6 +1114,15 @@ class InstalledVersions
       array (
       ),
       'reference' => 'b0a190285cd95cb019237851205b8140ef6e368e',
+    ),
+    'symfony/debug' => 
+    array (
+      'pretty_version' => 'v4.4.37',
+      'version' => '4.4.37.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5de6c6e7f52b364840e53851c126be4d71e60470',
     ),
     'symfony/deprecation-contracts' => 
     array (

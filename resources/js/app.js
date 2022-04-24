@@ -33,6 +33,22 @@ Vue.component('socket-chat', require('./components/SocketChat.vue').default);
 Vue.component('private-chat', require('./components/PrivateChat.vue').default);
 Vue.component('chat-user', require('./components/ChatUser.vue').default);
 Vue.component('toast-component', require('./components/ToastComponent.vue').default);
+Vue.component('chat-component', require('./components/v1/ChatComponent').default);
+Vue.component('create-post', require('./components/v1/CreatePost').default);
+Vue.component('user-post', require('./components/v1/UserCreatePost').default);
+Vue.component('post-component', require('./components/v1/Post').default);
+Vue.component('comment-component', require('./components/v1/CommentComponent').default);
+Vue.component('create-comment', require('./components/v1/CreateComment').default);
+Vue.component('track-component', require('./components/v1/TrackMessages').default);
+Vue.component('news-paginate', require('./components/lessons/NewsPaginate').default);
+Vue.component('post-create', require('./components/lessons/CreatePost').default);
+Vue.component('like-component', require('./components/lessons/LikeComponent').default);
+Vue.component('captcha-component', require('./components/v1/CaptchaComponent').default);
+Vue.component('smsclub-component', require('./components/smsclub').default);
+Vue.component('save-modal', require('./components/v1/news/SaveModal').default);
+Vue.component('search-component', require('./components/v1/SearchComponent').default);
+Vue.component('popup-component', require('./components/popups/v-popup').default);
+Vue.component('modal-component', require('./components/popups/ModalComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

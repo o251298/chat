@@ -3,7 +3,14 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="form-group">
-                    <textarea readonly class="form-control" rows="6">{{dataMessage.join('\n')}}</textarea>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row" style="overflow-y: scroll; height: 400px">
+                                <div class="friend-message" style="background: red; float: left; padding: 10px; margin-bottom: 5px" v-for="item in dataMessage">{{item}}</div>
+                            </div>
+                        </div>
+                    </div>
+<!--                    <textarea readonly class="form-control" rows="30">{{dataMessage.join('\n')}}</textarea>-->
                 </div>
                 <div class="input-group mb-3">
                     <input placeholder="Введите смс" type="text" class="form-control" v-model="message">
@@ -54,7 +61,7 @@
                 console.log(arr);
                 axios({
                     method: 'get',
-                    url: '/lessons/private-chat',
+                    url: '/private-chat',
                     params: {message: this.message, channels: arr, user: this.current_user.email}
                 }).then((response) => {
                     console.log(response);

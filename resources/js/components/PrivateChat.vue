@@ -58,7 +58,7 @@
                 this.is_send = true;
                 axios({
                     method: 'get',
-                    url: '/lessons/private-chat',
+                    url: '/private-chat',
                     params: {message: this.message, channels: this.usersSelect, user: this.user.email}
                 }).then((response) => {
                     console.log(response);

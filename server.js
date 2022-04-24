@@ -19,6 +19,16 @@ redis.on('pmessage', function (pattern, channel, message) {
     io.emit(channel + ':' + message.event, message.data);
 });
 
+var redisComment = new Redis();
+
+redisComment.psubscribe('news-comment.*');
+//redis.on('message', function (channel, message) {
+redisComment.on('pmessage', function (pattern, channel, message) {
+    console.log('comment received: ' + message);
+    message = JSON.parse(message);
+    io.emit(channel + ':' + message.event, message.data);
+});
+
 http.listen(6003, function() {
-    console.log('Listening port: 6001');
+    console.log('Listening port: 6003');
 });

@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -76,7 +77,20 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-2">
+                        <ul id="nav">
+                            <li><a class="nav" href="">Моя страница</a></li>
+                            <li><a class="nav" href="">Чат</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 </body>

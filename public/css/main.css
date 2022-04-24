@@ -1,0 +1,22 @@
+.nav {
+    text-decoration: none;
+    padding: 5px;
+    color: #1a1e21;
+    font-size: 15px;
+    font-weight: bold;
+}
+#nav{
+    list-style: none;
+}
+
+.users-list {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+.friend-message {
+    float: left;
+}
+.user-message {
+    float: right;
+}

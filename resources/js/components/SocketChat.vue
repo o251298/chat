@@ -39,7 +39,7 @@
                 this.is_send = true;
                 axios({
                     method: 'get',
-                    url: '/lessons/socket-chat',
+                    url: '/socket-chat',
                     params: {message: this.message}
                 }).then((response) => {
                     console.log(response);

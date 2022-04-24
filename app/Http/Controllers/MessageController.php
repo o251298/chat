@@ -12,6 +12,7 @@ class MessageController extends Controller
 {
     public function index(User $user)
     {
+        $users = User::where('id', '!=', Auth::id());
         $friend = $user;
         $currentUser = User::find(Auth::id());
 
@@ -36,6 +37,6 @@ ORDER BY created_at ASC";
         }
 
         $messages = $res;
-        return view('room', ['friend' => $friend, 'currentUser' => $currentUser, 'messages' => $messages]);
+        return view('room', ['friend' => $friend, 'currentUser' => $currentUser, 'messages' => $messages, 'users' => $users->get()]);
     }
 }

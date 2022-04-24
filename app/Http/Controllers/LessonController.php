@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Events\NewMessage;
 use App\Events\PrivateMessage;
 use App\Models\Message;
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Events\ChartEvent;
@@ -69,6 +70,12 @@ class LessonController extends Controller
 
     public function privateChat(Request $request)
     {
+        if ($request->post_id)
+        {
+            $post_id = $request->post_id;
+        } else {
+            $post_id = null;
+        }
         $channel = $request->channels;
         Log::info($channel);
         $idReceiver = $channel[0];
@@ -77,11 +84,19 @@ class LessonController extends Controller
         PrivateMessage::dispatch($request->all());
         $receiver = User::where('id', '=', $id)->first();
         $message = Message::create([
-            'text' => $request->message,
+            'text' => json_encode($request->message),
             'sender_id' => Auth::id(),
-            'receiver_id' => $receiver->id
+            'receiver_id' => $receiver->id,
+            'file' => $request->file,
+            'post_id' => $post_id,
         ]);
         Log::info($message);
         return $request->all();
+    }
+
+    public function vue()
+    {
+        $posts = Post::query();
+        return response()->json($posts->paginate(5));
     }
 }

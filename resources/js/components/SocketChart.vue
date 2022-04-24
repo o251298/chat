@@ -61,7 +61,7 @@
                 this.is_send = true;
                 axios({
                     method: 'get',
-                    url: '/lessons/socket-chart',
+                    url: '/socket-chart',
                     params: {label: this.label, sale: this.sale, realtime: this.realtime}
                 }).then((response) => {
                     console.log(response);
